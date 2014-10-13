@@ -1,0 +1,87 @@
+<apex:page showHeader="false" controller="HelloController">
+  
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Salesforce ConsoleOne to One chat</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <apex:stylesheet value="{!$Resource.FooterChatStyles}"/>
+</head>
+<body>
+    <div id="container">
+        <div class="chatPanel panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Private chat with <span class="opponent"></span></h3>
+            </div>
+            <div class="chat panel-body">
+                <div id="rightSidebar">
+                    <ul class="chat-user-list"></ul>
+                    <div id="consoleActions">
+                        <span>Send context</span>
+                        <button onclick="javascript:sendTabLink()">
+                            Send Tab View
+                        </button>
+                        <br/>
+                        <button onclick="javascript:sendWorkspaceLink()">
+                            Send Workspace View
+                        </button>
+                    </div>
+                </div>
+                <div class="chat-content">
+                    <div class="messages"></div>
+                    <form action="#" class="controls">
+                        <div class="input-group">
+                            <span class="uploader input-group-addon">
+                                <span class="glyphicon glyphicon-file"></span>
+                                <input type="file" class="tooltip-title" data-toggle="tooltip" data-placement="right" title="Attach file"/>
+                                <div class="attach"></div>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Enter your message here.."/>
+                            <span class="input-group-btn">
+                                <button type="submit" class="sendMessage btn btn-primary">Send</button>
+                            </span>
+                        </div>
+                        <div class="file-loading bg-warning">
+                            <!-- <img src="../images/file-loading.gif" alt="loading"/> -->
+                            Please wait.. Chat is logging you in
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!-- .panel -->
+    </div><!-- #wrap -->
+    
+    <section id="loginForm" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">One to One chat<br/>
+                        <h4>github.com/enhuang</h4>
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://quickblox.github.io/sample-chat-xmpp-web/libs/quickblox.js"></script>
+    <script src="https://quickblox.github.io/sample-chat-xmpp-web/libs/quickblox.chat.js"></script>
+    <apex:includeScript value="/support/console/31.0/integration.js"/>
+    <script type="text/javascript">
+        /* Key for chat */
+        var sfdcUserId='{!UserId}';
+    </script>
+    <apex:includeScript value="{!$Resource.FooterChat}"/>
+    
+</body>
+</html>
+ 
+  
+  
+  
+</apex:page>

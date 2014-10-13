@@ -1,0 +1,290 @@
+/* Global
+----------------------------------------------------------*/
+html,
+body {
+	height: 100%;
+}
+
+/* Login Form
+----------------------------------------------------------*/
+#loginForm .modal-dialog {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 240px;
+	height: 180px;
+	margin: auto;
+}
+
+#loginForm .modal-title {
+	font-size: 32px;
+	line-height: 30px;
+	text-align: center;
+}
+	#loginForm .modal-title a {
+		font-size: 16px;
+		color: inherit;
+		text-decoration: none;
+	}
+		#loginForm .modal-title img {
+			width: 18px;
+			margin-right: 7px;
+		}
+
+#loginForm button:first-child {
+	margin-bottom: 15px;
+}
+
+#loginForm .progress {
+	display: none;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#loginForm .progress .progress-bar {
+	width: 100%;
+}
+
+/* Chat Module
+----------------------------------------------------------*/
+/* Chats */
+#container {
+	display:none;
+}
+
+.sendMessage {/*I dont like important*/
+	font-size: 14px !important;
+	color: #fff !important;
+	background-color: #428bca !important;
+	background-image: none !important;
+	margin-bottom: 0 !important;
+	font-weight: 400 !important;
+	border: 1px solid transparent !important;
+	border-radius: 4px !important;
+	padding: 6px 12px !important;
+}
+
+.chat {
+	padding: 0;
+}
+.chatPanel {
+	margin-bottom: 0;
+}
+.chat .chat-content {
+	overflow: hidden;
+	height: 100%;
+	padding: 0 2px;
+	background: #ececec;
+}
+	.chat .messages {
+		position: relative;
+		overflow: auto;
+	}
+	.chat .controls {
+		height: 42px;
+		padding: 4px 2px;
+	}
+
+/* Users List */
+.chat-user-list {
+	float: right;
+	width: 150px;
+	height: 100%;
+	overflow: auto;
+	padding: 0;
+}
+	.list-group-item {
+		margin-left: 1px;
+		color: #555 !important;
+		border-left: 0;
+		border-right: 0;
+		border-radius: 0 !important;
+		cursor: pointer;
+	}
+	.list-group-item.btn {
+		text-align: left;
+	}
+		.list-group-item img {
+			width: 23px;
+			vertical-align: text-top;
+		}
+
+/* Messages */
+.message {
+	padding: 5px;
+	margin: 2px;
+}
+.message.white {
+	background: #fff;
+}
+	.message time {
+		float: right;
+		font-size: 13px;
+		color: #999;
+	}
+	.message .message-description {
+		word-wrap: break-word;
+	}
+	.message .message-attach {
+		margin-top: 7px;
+		padding-top: 7px;
+		font-size: 13px;
+		border-top: 1px solid #ccc;
+	}
+
+.typing-message {
+	padding: 5px;
+	font-size: 13px;
+	color: #999;
+	background: #fff;
+}
+
+.service-message {
+	padding: 5px;
+	font-size: 13px;
+	opacity: 0;
+}
+
+/* Loading */
+.loading {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	margin: auto;
+}
+.file-loading {
+	display: none;
+	line-height: 34px;
+	text-align: center;
+}
+	.file-loading img {
+		position: relative;
+		top: -2px;
+		width: 23px;
+		height: 23px;
+	}
+.search-loading {
+	width: 40px;
+	height: 40px;
+}
+
+/* Attach file */
+.uploader {
+	position: relative;
+}
+	.uploader:hover .glyphicon-file {
+		opacity: 0.7;
+	}
+	.uploader input[type="file"] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+	}
+	.uploader .attach {
+		display: none;
+		position: absolute;
+		top: -40px;
+		left: 0;
+		padding: 10px;
+		color: #fff;
+		background: rgba(0, 0, 0, 0.6);
+		border-radius: 3px;
+	}
+		.attach .file {
+			padding-right: 25px;
+			font-size: 13px;
+		}
+			.attach .file .close {
+				position: absolute;
+				top: 6px;
+				right: 10px;
+				color: #fff;
+				opacity: 1;
+			}
+			.attach .file .close:hover {
+				color: #000;
+				opacity: 0.5;
+			}
+			
+/* Room manager
+----------------------------------------------------------*/
+.col {
+	position: relative;
+	width: 45%;
+	height: 100%;
+}
+.col-search {
+	float: left;
+}
+.col-occupants {
+	float: right;
+}
+	.col-content {
+		padding: 10px 10px 0;
+	}
+	.col-footer {
+		height: 55px;
+		padding: 10px 0;
+		text-align: center;
+	}
+.col-controls {
+	overflow: hidden;
+	width: 10%;
+	background: #ececec;
+}
+	.col-controls .buttons {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 34px;
+		height: 70px;
+		margin: auto;
+	}
+		.col-controls .buttons button:first-child {
+			margin-bottom: 10px;
+		}
+
+.users {
+	padding: 10px;
+}
+.col-search .users {
+	display: none;
+}
+	.users .list-group {
+		height: 100%;
+		margin-bottom: 0;
+		overflow: auto;
+		background: #fff;
+	}
+
+.col-occupants .alert {
+	display: none;	
+}
+
+.checkbox {
+	margin-top: 0;
+}
+	.checkbox input[type=checkbox] {
+		margin-right: 10px;
+		margin-left: 0;
+	}
+
+.overlay {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}

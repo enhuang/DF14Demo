@@ -1,0 +1,11 @@
+//The HELLO WORLD ... 
+//for Case Sidebar
+
+<apex:page standardController="Case" >
+  Hello world, here comes {!$User.FirstName}. 
+  <br/><br/>
+  You are looking at case {!$CurrentPage.parameters.id}
+  <br/><br/>
+  The contact of this case is {!Case.Contact.Name}.
+</apex:page>
+
